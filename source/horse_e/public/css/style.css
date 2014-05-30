@@ -1,5 +1,23 @@
-body {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+.top {
+  padding-top: 5%;
 	background-image:url("horse.jpeg");
+}
+
+.bottom {
+  margin-top: -50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image:url("http://24.media.tumblr.com/542316449f0fe341621e4c79da204195/tumblr_n08x6hVdn91qfvmqco1_500.gif");
 }
 
 h2 {
@@ -9,26 +27,49 @@ h2 {
 }
 
 
-#random_text {
-  display: inline-block;
+#random_text, p {
+  display: block;
   background-color: white;
-  margin: 200px;
-  padding:  100px;
+  margin: 50px 10%;
+  padding:  30px 0 50px 0;
   border-radius: 20px;
-  font-size: 20px;
-
-}
-
-input[type="submit"]{
-  font-size: 2em;
-}
-
-.row1 {
-  width: 90%;
+  font-size: 1.25em;
+  background-image:url('../img/congruent_pentagon.png');
   text-align: center;
 }
 
-img {
-  width: 20%;
-  margin: 1%;
+#appending {
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
 }
+
+#form_generate {
+  text-align: center;
+}
+
+input[type="submit"]{
+  font-size: 1.25em;
+}
+
+.img_row {
+  width: 100%;
+  text-align: center;
+}
+
+.img1 {
+  width: 20%;
+  margin: 0 2%;
+}
+
+.img2 {
+  width: 20%;
+  margin: 0 4% 4% 4%;
+}
+
+.img3 {
+  width: 20%;
+  margin: 0 2% 10% 2%;
+}
+
+

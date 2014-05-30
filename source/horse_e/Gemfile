@@ -17,6 +17,8 @@ gem 'activerecord'
 gem 'rake'
 
 gem 'shotgun'
+gem 'twilio-ruby'
+gem 'rubygems'
 
 group :test do
   gem 'faker'
