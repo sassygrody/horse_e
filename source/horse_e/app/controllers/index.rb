@@ -1,6 +1,4 @@
 
-
-
 get '/' do
   # Look in app/views/index.erb
   session.clear
@@ -8,17 +6,42 @@ get '/' do
   erb :index
 end
 
+get '/horse' do
+  session[:page] = 'horse'
+  erb :horse_home
+end
 
-post '/' do
-  $content = []
+post '/horse' do
+  @content = []
     i = 0
     File.open("tweets.txt", "r").each_line do |line|
-      $content << line.chop if i % 4 == 0
+      @content << line.chop if i % 4 == 0
       i += 1
     end
 
   if request.xhr?
-    session[:text] = $content.sample
+    session[:text] = @content.sample
+    erb :twilio, layout: false
+  else
+    # session[:tweet] = @content.sample
+    redirect 'https://www.youtube.com/watch?v=oavMtUWDBTM'
+  end
+end
+
+get '/fortune' do
+  session[:page] = 'fortune'
+  erb :fortune_home
+end
+
+post '/fortune' do
+  @content = []
+    i = 0
+    File.open("fortune.txt", "r").each_line do |line|
+      @content << line
+    end
+
+  if request.xhr?
+    session[:text] = @content.sample
     erb :twilio, layout: false
   else
     # session[:tweet] = $content.sample

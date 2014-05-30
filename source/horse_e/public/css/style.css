@@ -8,6 +8,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     background: transparent;
 }
 
+
+
 .top {
   padding-top: 5%;
 	background-image:url("horse.jpeg");
@@ -18,6 +20,11 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   background-repeat: no-repeat;
   background-size: cover;
   background-image:url("http://24.media.tumblr.com/542316449f0fe341621e4c79da204195/tumblr_n08x6hVdn91qfvmqco1_500.gif");
+}
+
+.fortune_container {
+  padding-top: 5%;
+  background-image:url("crystal_ball.jpeg");
 }
 
 h2 {
@@ -38,18 +45,35 @@ h2 {
   text-align: center;
 }
 
+
+#green_block {
+  display: block;
+  background-image: none;
+  margin: 50px 10%;
+  padding:  30px;
+  border-radius: 20px;
+  font-size: 1.25em;
+  text-align: center;
+}
+
+#green_block input[type="submit"]{
+  padding: 30px;
+  border-radius: 50px;
+}
+
 #appending {
   width: 600px;
   margin: 0 auto;
   text-align: center;
 }
 
-#tweet_generate_and_form_to_text {
+/*#tweet_generate_and_form_to_text {
   text-align: center;
-}
+}*/
 
 input[type="submit"]{
   font-size: 1.25em;
+
 }
 
 .img_row {
@@ -71,5 +95,16 @@ input[type="submit"]{
   width: 20%;
   margin: 0 2% 10% 2%;
 }
+
+/*#twitter_copy {
+  padding: 0;
+}*/
+
+#fortune_twitter_copy {
+  color: gray;
+  font-size: 50px;
+}
+
+
 
 
