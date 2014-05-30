@@ -10,15 +10,30 @@ $(document).ready(function() {
       });
     });
 
+   $(document).on('click', '#friends', function(event){
+    event.preventDefault();
+    $.post('/friends', function(rsp){
+      $('#green_block').append(rsp);
+    });
+  });
+
   $("#green_block").on('submit', '#twilio-text-form', function(event){
     event.preventDefault();
-    var phone = $("input[name='destination']:checked").val();
-    var data = {number:phone};
-    $.post('/text', data, function(sentresponse) {
-      console.log(sentresponse);
-      $('.phone_form').html(sentresponse);
+    var numbers = $("input[name='checkbox[]']:checked").map(function(){
+      return this.value;
+    }).get()
 
-    });
+
+    var counter = 0;
+    $('#twilio-text-form').remove();
+
+    while ( counter < numbers.length ) {
+      $.post('/text', {number: numbers[counter]}, function(sentresponse) {
+        $('.phone_form').html(sentresponse);
+      });
+    counter ++;
+    }
+
   });
 
 });

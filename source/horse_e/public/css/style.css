@@ -33,6 +33,15 @@ h2 {
 	text-align: center;
 }
 
+.home_background{
+  background-image: url('background_twilio.png');
+  background-size: cover 80px 60px;
+}
+.home_link {
+  margin-top: 70px;
+  text-align: center;
+  font-size: 50px;
+}
 
 #blue_block, p {
   display: block;
@@ -96,15 +105,40 @@ input[type="submit"]{
   margin: 0 2% 10% 2%;
 }
 
-/*#twitter_copy {
-  padding: 0;
-}*/
-
-#fortune_twitter_copy {
-  color: gray;
-  font-size: 50px;
+#twitter_copy p {
+  margin: 0;
+  padding-bottom: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 60px;
 }
 
+#fortune_twitter_copy p {
+  color: gray;
+  font-size: 50px;
+  margin: 0;
+  padding-bottom: 0;
+}
 
+#twilio-text-form {
+  color: #E37800;
+  font-size: 30px;
+}
 
+#twilio-text-form li {
+  margin-top: 0;
+  padding-top: 0;
+  list-style-type: none;
+}
+
+#friends {
+  font-size: 40px;
+  color: #CD0074;
+  /*text-decoration: none;*/
+  margin-top: 20px;
+}
+
+.checkbox {
+/*  background-color: black;
+  margin-bottom: 10px;*/
+}
 

@@ -51,6 +51,7 @@ post '/fortune' do
 end
 
 post '/text' do
+
   receiver = params[:number]
   phone_number = '+16146826913'
   account_sid = 'AC101ba4a75cdce441654a3d3106e3d48b'
@@ -66,5 +67,9 @@ post '/text' do
 
   erb :sent_message, layout: false
 
+end
+
+post '/friends' do
+  erb :form, layout: false
 end
 
