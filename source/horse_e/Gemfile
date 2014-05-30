@@ -18,7 +18,7 @@ gem 'rake'
 
 gem 'shotgun'
 gem 'twilio-ruby'
-gem 'rubygems'
+# gem 'rubygems'
 
 group :test do
   gem 'faker'

@@ -27,7 +27,7 @@ h2 {
 }
 
 
-#random_text, p {
+#blue_block, p {
   display: block;
   background-color: white;
   margin: 50px 10%;
@@ -44,7 +44,7 @@ h2 {
   text-align: center;
 }
 
-#form_generate {
+#tweet_generate_and_form_to_text {
   text-align: center;
 }
 

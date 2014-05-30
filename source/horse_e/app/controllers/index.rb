@@ -19,7 +19,7 @@ post '/' do
 
   if request.xhr?
     session[:text] = $content.sample
-    erb :twilio
+    erb :twilio, layout: false
   else
     # session[:tweet] = $content.sample
     redirect 'https://www.youtube.com/watch?v=oavMtUWDBTM'
@@ -41,7 +41,7 @@ post '/text' do
     :body => session[:text]
     )
 
-  erb :sent_message
+  erb :sent_message, layout: false
 
 end
 
