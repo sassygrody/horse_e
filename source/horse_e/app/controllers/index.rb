@@ -65,6 +65,9 @@ post '/text' do
     )
 
   erb :sent_message, layout: false
+end
 
+post '/friends' do
+  erb :form, layout: false
 end
 

@@ -10,6 +10,14 @@ $(document).ready(function() {
       });
     });
 
+  $(document).on('click', '#friends', function(event){
+    event.preventDefault();
+    $.post('/friends', function(rsp){
+      console.log(rsp)
+      $('#green_block').append(rsp);
+    });
+  });
+
   $("#green_block").on('submit', '#twilio-text-form', function(event){
     event.preventDefault();
     var phone = $("input[name='destination']:checked").val();
@@ -20,5 +28,4 @@ $(document).ready(function() {
 
     });
   });
-
 });

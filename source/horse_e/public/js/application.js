@@ -9,6 +9,14 @@ $(document).ready(function() {
       });
     });
 
+  $(document).on('click', '#friends', function(event){
+    event.preventDefault();
+    $.post('/friends', function(rsp){
+      console.log(rsp)
+      $('#blue_block').append(rsp);
+    });
+  });
+
   $("#blue_block").on('submit', '#twilio-text-form', function(event){
     event.preventDefault();
     var phone = $("input[name='destination']:checked").val();
